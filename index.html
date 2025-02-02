@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alifian — Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./.images/logo.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#languages">Languages</a></li> <!-- New link -->
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>Hello, I'm <br><strong>Alifian Rasha Azkayra</strong></h1>
+        <span id="typing-text"></span> <!-- Typing animation will appear here -->
+        <p>I am currently 14 years old, continuing my education at SMPN 1 Cirebon, West Java, Indonesia.
+            An average student, who is interested in exploring the world of technology, especially data,
+            and artificial intelligence. Challenging myself to create the world a better place, my ability to communicate effectively throughout teams, understanding complex problems,
+            and help finding solutions for the problem. </p>
+    </section>
+
+    <!-- New Programming Languages Section -->
+    <section id="languages">
+        <h1>Programming Languages</h1>
+        <div class="languages-grid">
+            <div class="language-card">
+                <i class="fab fa-python"></i>
+                <h2>Python</h2>
+                <p>My primary programming language for data science, machine learning, and automation.</p>
+            </div>
+            <div class="language-card">
+                <i class="fab fa-r-project"></i>
+                <h2>R</h2>
+                <p>Used for statistical computing, data analysis, and visualization.</p>
+            </div>
+            <div class="language-card">
+                <img src=".images/julia.svg" alt="Julia Icon" class="language-icon1">
+                <h2>Julia</h2>
+                <p>Used for high-performance computing, scientific research, machine learning, and numerical analysis.</p>
+            </div>
+            <div class="language-card">
+                <img src=".images/sql.svg" alt="SQL Icon" class="language-icon2">
+                <h2>SQL</h2>
+                <p>Used to manage and query databases, store, retrieve, and manipulate structured data.</p>
+            </div>
+            <!-- Add more languages here if needed -->
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src=".images/1.png" alt="Project 1">
+                </div>
+                <h2>Neural Network Generative Text</h2>
+                <p>Trained neural network model to generate a text based on suggestions or best predicted words.</p>
+                <div class="expand-content">
+                    <p>I made this project for school assignment.</p>
+                    <div class="project-date">
+                        <p>October, 12th 2024</p>
+                    </div>
+                    <a href="https://github.com/MacNMac/nn-generative" class="source-button" target="_blank">Github</a>
+                    <a href="https://www.youtube.com/watch?v=IzrKp_fIztw" class="source-button" target="_blank">Youtube</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src=".images/2.png" alt="Project 2">
+                </div>
+                <h2>Hand, Emotion Recognition and Object Detection</h2>
+                <p>Uses mediapipe, deepface, and opencv Python. Performing a 90% accurate machine learning analysis.</p>
+                <div class="expand-content">
+                    <p>This project uses live camera capture, you can also capture just from a photo.</p>
+                    <div class="project-date">
+                        <p>July, 8th 2024</p>
+                    </div>
+                    <a href="https://github.com/MacNMac/opencv-recognition" class="source-button" target="_blank">Github</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./.images/3.png" alt="Project 3">
+                </div>
+                <h2>Levenshtein Distance</h2>
+                <p>The Levenshtein distance is a string metric for measuring the difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (i.e. insertions, deletions or substitutions) required to change one word into the other.</p>
+                <div class="expand-content">
+                    <p>Levenshtein distance may also be referred to as edit distance, although that term may also denote a larger family of distance metrics known collectively as edit distance. It is closely related to pairwise string alignments.</p>
+                    <div class="project-date">
+                        <p>July, 3rd 2024</p>
+                    </div>
+                    <a href="https://github.com/MacNMac/levenshtein-py" class="source-button" target="_blank">Github</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Expanded Project Card -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Social Media Icons Section -->
+    <section id="social-media">
+        <h1>Find Me On</h1>
+        <div class="social-icons">
+            <a href="https://github.com/macnmac" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com/alifian.dev24" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Alifian Rasha Azkayra. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
