@@ -135,7 +135,7 @@ function erase() {
 // Start the typing animation
 type();
 
-const form = document.getElementById('myForm');
+const form = document.getElementById('contact-form');
          form.addEventListener('submit', function (e) {
              e.preventDefault();
              fetch(this.action, {
