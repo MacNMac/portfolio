@@ -33,8 +33,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Message:', message);
-
-    alert('Thank you for your message!');
 });
 
 // Smooth scrolling for navigation links
