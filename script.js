@@ -134,3 +134,22 @@ function erase() {
 
 // Start the typing animation
 type();
+
+const form = document.getElementById('myForm');
+         form.addEventListener('submit', function (e) {
+             e.preventDefault();
+             fetch(this.action, {
+                 method: 'POST',
+                 body: new FormData(this),
+                 headers: {
+                     'Accept': 'application/json'
+                 }
+             }).then(response => {
+                 if (response.ok) {
+                     alert('Thank you! Your message has been sent.');
+                     form.reset();
+                 } else {
+                     alert('Oops! Something went wrong.');
+                 }
+             });
+         });
