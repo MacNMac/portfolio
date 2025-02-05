@@ -22,13 +22,6 @@ body::-webkit-scrollbar {
     width: 0; /* Remove scrollbar width */
     background: transparent; /* Make scrollbar track transparent */
 }
-
-strong {
-    color: #00ff88;
-    font-size: 3rem;
-}
-
-/* Navigation Bar Styles */
 header {
     background: #333;
     padding: 1rem 0;
@@ -36,28 +29,26 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow under the navigation bar */
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+strong {
+    color: #00ff88;
+    font-size: 3rem;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
 }
 
-.nav-links li {
+nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
-.nav-links li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -65,17 +56,8 @@ nav {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: #00ff88;
-    transform: translateY(-5px);
-}
-
-.nav-links li a.active {
-    color: #00ff88;
-    transform: translateY(-5px);
-}
-
-.nav-links li a::after {
+/* Underline effect for navigation links */
+nav ul li a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -87,45 +69,16 @@ nav {
     transform-origin: bottom right;
     transition: transform 0.3s ease;
 }
-
-.nav-links li a:hover::after,
-.nav-links li a.active::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none; /* Hide by default */
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00ff88;
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show on small screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide nav links by default on small screens */
-        flex-direction: column;
-        width: 100%;
-        background: #333;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show nav links when active */
-    }
-
-    .nav-links li {
-        margin: 1rem 0;
-        text-align: center;
-    }
 }
 
 section {
